@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MainPage</title>
+    <!-- Bootstrap -->
+    <!--<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">-->
+    <!--<link href="css/heroic-features.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/js/dist/modal.js">-->
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- Подключаем плагин Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Хогвартс</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <button type="button" class="btn btn-primary btn-sm btn-menu admin" data-toggle="modal"
+            data-target="#addPerson">
+            Добавить преподавателя
+            </button>
+
+            <!--<a href="#addPerson" data-target="modal" class="btn btn-primary btn-sm btn-menu admin">Добвить-->
+                <!--преподавателя</a>-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">О школе
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Преподаватели</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal -->
+<div id="addPerson" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавление сотрудника</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4 required">
+                            <label for="surname">Фамилия</label> <input
+                                type="text" class="form-control" id="surname" placeholder="Иванов"/></div>
+                        <div class="form-group col-md-4 required">
+                            <label for="firstname">Имя</label> <input type="text"
+                                                                      class="form-control"
+                                                                      id="firstname"
+                                                                      placeholder="Иван"/>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="position">Должность</label> <select
+                            class="custom-select" id="position">
+                        <option value="1" selected>...</option>
+                    </select></div>
+                    <div class="form-group">
+                        <label for=>Достижения</label> <input type="text"
+                                                              class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="biography">Краткая биография</label>
+                        <textarea
+                                class="form-control" id="biography" rows="2">
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Интересы</label> <textarea
+                            class="form-control" id="interests" rows="2"></textarea>
+                        <small class="form-text text-muted"> Каждый элемент списка необходимо указывать с новой строки
+                        </small>
+                    </div>
+                    <hr/>
+                    <div class="form-group" style="margin-bottom:0;">
+                        <div>
+                            <button type="button" class="btn btn-info btn-sm">Выбрать фотографию</button>
+                            <small class="text-muted" style="padding-left:10px;"> Не выбирайте новый файл, чтобы
+                                сохранить предыдущую фотографию
+                            </small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-primary">Добавить сотрудника</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col">
+        <div class="card box-shadow">
+            <div class="card-header">Альбус Дамблдор</div>
+            <div class="card-body">
+                <div class="card-image-container"><img
+                        src="image/Albus_Dumbledore.jpg"/>
+                </div>
+                <div class="position">Директор, профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card box-shadow">
+            <div class="card-header"> Минерва Макгонаглл</div>
+            <div class="card-body">
+                <div class="card-image-container"><img
+                        src="image/McGonagall.jpg"/>
+                </div>
+                <div class="position">Заместитель директора, профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card box-shadow">
+            <div class="card-header"> Северус Снейп</div>
+            <div class="card-body">
+                <div class="card-image-container"><img
+                        src="image/Severus_Snape.jpg"/>
+                </div>
+                <div class="position">Профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card box-shadow">
+            <div class="card-header"> Рубеус Хагрид</div>
+            <div class="card-body">
+                <div class="card-image-container"><img
+                        src="image/Rubeus_Hagrid.jpg"/></div>
+                <div class="position">Профессор</div>
+                <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
+                <div class="actions admin">
+                    <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
