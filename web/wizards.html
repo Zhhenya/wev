@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MainPage</title>
-    <!-- Bootstrap -->
-    <!--<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">-->
-    <!--<link href="css/heroic-features.css" rel="stylesheet">-->
-    <!--<link rel="stylesheet" href="node_modules/bootstrap/js/dist/modal.js">-->
-    <!-- Подключаем Bootstrap CSS -->
+    <title>Wizards</title>
+    <link rel="icon" href="image/hogvarts.jpg">
+    <link href="css/heroic-features.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -38,20 +35,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <button type="button" class="btn btn-primary btn-sm btn-menu admin" data-toggle="modal"
-            data-target="#addPerson">
-            Добавить преподавателя
+                    data-target="#person">
+                Добавить преподавателя
             </button>
-
-            <!--<a href="#addPerson" data-target="modal" class="btn btn-primary btn-sm btn-menu admin">Добвить-->
-                <!--преподавателя</a>-->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">О школе
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Преподаватели</a>
+                    <a class="nav-link" href="index.html">О школе</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="wizards.html">Преподаватели</a>
                 </li>
             </ul>
         </div>
@@ -59,11 +51,11 @@
 </nav>
 
 <!-- Modal -->
-<div id="addPerson" class="modal fade">
+<div id="person" class="modal fade">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Добавление сотрудника</h5>
+                <h5 class="modal-title">"Сотрудник"</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -114,7 +106,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-                <button type="button" class="btn btn-primary">Добавить сотрудника</button>
+                <button type="button" class="btn btn-primary">Сохранить</button>
             </div>
         </div>
     </div>
@@ -132,7 +124,9 @@
                 <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
                 <div class="actions admin">
                     <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
-                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
                 </div>
             </div>
         </div>
@@ -148,7 +142,9 @@
                 <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
                 <div class="actions admin">
                     <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
-                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
                 </div>
             </div>
         </div>
@@ -164,7 +160,9 @@
                 <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
                 <div class="actions admin">
                     <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
-                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
                 </div>
             </div>
         </div>
@@ -179,11 +177,20 @@
                 <a class="btn btn-outline-secondary btn-sm btn-card" href="more.html">Подробнее</a>
                 <div class="actions admin">
                     <button type="button" class="btn btn-danger btn-sm btn-card">Удалить</button>
-                    <button type="button" class="btn btn-primary btn-sm btn-card">Редактировать</button>
+                    <button type="button" class="btn btn-primary btn-sm btn-card" data-toggle="modal"
+                            data-target="#person">Редактировать
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--<footer class="py-5 bg-dark">-->
+    <!--<div class="container">-->
+        <!--<div class="footer-content">-->
+            <!--2018 © Хогвартс-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
 </body>
 </html>

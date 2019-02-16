@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>MainPage</title>
-    <!-- Bootstrap -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <title>About</title>
     <link href="css/heroic-features.css" rel="stylesheet">
+    <link rel="icon" href="image/hogvarts.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
 </head>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- Подключаем плагин Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+
+<!-- Подключаем Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -25,13 +34,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">О школе
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Преподаватели</a>
+                    <a class="nav-link" href="index.html">О школе</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="wizards.html">Преподаватели</a>
                 </li>
             </ul>
         </div>
@@ -78,5 +85,12 @@
     <footer class="footer">
     </footer>
 </div>
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <div class="footer-content">
+            2018 © Хогвартс
+        </div>
+    </div>
+</footer>
 </body>
 </html>

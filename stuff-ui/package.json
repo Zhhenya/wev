@@ -1,0 +1,52 @@
+{
+  "name": "stuff-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.6.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "formik": "^1.4.0",
+    "lodash": "^4.17.11",
+    "mobx": "^5.7.0",
+    "mobx-react": "^5.4.2",
+    "prop-types": "^15.6.2",
+    "rc-datepicker": "^5.0.13",
+    "react": "^16.6.3",
+    "react-bootstrap-date-picker": "^5.1.0",
+    "react-date-picker-cs": "^0.1.28",
+    "react-datepicker": "^2.0.0",
+    "react-dom": "^16.6.3",
+    "react-easy-print": "^0.6.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "react-select": "^2.1.2",
+    "typeface-roboto": "0.0.54",
+    "yup": "^0.26.6"
+  },
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "proxy": "http://localhost:8081",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^13.0.0",
+    "prettier": "^1.15.3"
+  }
+}
