@@ -2,6 +2,7 @@ package stuff.entity;
 
 import javax.persistence.*;
 import java.sql.Blob;
+import java.util.List;
 
 @Entity
 @Table(name="person", schema = "wizard")
@@ -12,8 +13,8 @@ public class Person{
     private String surname;
     private String firstName;
     private String academicTitle;
-    private Blob biography;
-    private Blob interests;
+    private String biography;
+    private String interests;
     private Blob photo;
     @ManyToOne
     private Position position;
@@ -38,11 +39,11 @@ public class Person{
         return academicTitle;
     }
 
-    public Blob getBiography() {
+    public String getBiography() {
         return biography;
     }
 
-    public Blob getInterests() {
+    public String getInterests() {
         return interests;
     }
 
@@ -70,11 +71,11 @@ public class Person{
         this.academicTitle = academicTitle;
     }
 
-    public void setBiography(Blob biography) {
+    public void setBiography(String biography) {
         this.biography = biography;
     }
 
-    public void setInterests(Blob interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
     }
 

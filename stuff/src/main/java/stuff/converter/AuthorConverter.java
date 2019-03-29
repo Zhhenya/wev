@@ -22,6 +22,7 @@ public class AuthorConverter implements Converter<Author, AuthorDto> {
     @Override
     public AuthorDto convert(Author author) {
         AuthorDto authorDto = new AuthorDto();
+        authorDto.setId(author.getId());
         authorDto.setPersonDto(personConverter.convert(author.getPerson()));
         authorDto.setPublicationDto(publicationConverter.convert(author.getPublication()));
         return authorDto;

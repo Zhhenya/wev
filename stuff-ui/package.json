@@ -31,8 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron": "electron ."
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +45,6 @@
   ],
   "devDependencies": {
     "electron": "^3.0.10",
-    "electron-packager": "^13.0.0",
     "prettier": "^1.15.3"
   }
 }

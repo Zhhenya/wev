@@ -1,9 +1,6 @@
 package stuff.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "position", schema = "wizard")
@@ -28,4 +25,5 @@ public class Position {
     public void setName(String name) {
         this.name = name;
     }
+
 }

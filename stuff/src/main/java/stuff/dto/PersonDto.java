@@ -1,14 +1,13 @@
 package stuff.dto;
 
-import java.sql.Blob;
-
 public class PersonDto {
+    private Long id;
     private String surname;
     private String firstName;
     private String academicTitle;
-    private Blob biography;
-    private Blob interests;
-    private Blob photo;
+    private String biography;
+    private String interests;
+  //  private Blob photo;
     private PositionDto positionDto;
 
     public String getSurname() {
@@ -23,16 +22,12 @@ public class PersonDto {
         return academicTitle;
     }
 
-    public Blob getBiography() {
+    public String getBiography() {
         return biography;
     }
 
-    public Blob getInterests() {
+    public String getInterests() {
         return interests;
-    }
-
-    public Blob getPhoto() {
-        return photo;
     }
 
     public PositionDto getPositionDto() {
@@ -51,19 +46,23 @@ public class PersonDto {
         this.academicTitle = academicTitle;
     }
 
-    public void setBiography(Blob biography) {
+    public void setBiography(String biography) {
         this.biography = biography;
     }
 
-    public void setInterests(Blob interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
-    }
-
-    public void setPhoto(Blob photo) {
-        this.photo = photo;
     }
 
     public void setPositionDto(PositionDto positionDto) {
         this.positionDto = positionDto;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

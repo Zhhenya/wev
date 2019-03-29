@@ -1,6 +1,7 @@
 package stuff.dto;
 
 public class AuthorDto {
+    private Long id;
     private PublicationDto publicationDto;
     private PersonDto personDto;
 
@@ -18,5 +19,13 @@ public class AuthorDto {
 
     public void setPersonDto(PersonDto personDto) {
         this.personDto = personDto;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -11,6 +11,7 @@ public class PositionConverter implements Converter<Position, PositionDto> {
     @Override
     public PositionDto convert(Position position) {
         PositionDto positionDto = new PositionDto();
+        positionDto.setId(position.getId());
         positionDto.setName(position.getName());
         return positionDto;
     }

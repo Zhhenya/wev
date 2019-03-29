@@ -12,21 +12,21 @@ public class Publication {
     @Id
     @GeneratedValue
     private Long id;
-    private Blob content;
+    private String content;
 
     public Long getId() {
         return id;
-    }
-
-    public Blob getContent() {
-        return content;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setContent(Blob content) {
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
         this.content = content;
     }
 }

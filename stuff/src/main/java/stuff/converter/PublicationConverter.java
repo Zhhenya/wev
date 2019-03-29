@@ -11,6 +11,7 @@ public class PublicationConverter implements Converter<Publication, PublicationD
     @Override
     public PublicationDto convert(Publication publication) {
         PublicationDto publicationDto = new PublicationDto();
+        publicationDto.setId(publication.getId());
         publicationDto.setContent(publication.getContent());
         return publicationDto;
     }
