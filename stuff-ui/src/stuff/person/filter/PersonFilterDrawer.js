@@ -37,10 +37,11 @@ const styles = theme => ({
 class PersonFilterDrawer extends Component {
   state = {
     loading: true,
-    positions:[]
+    positionDtos:[]
   };
 
   componentDidMount() {
+    console.log("DIDIIDIDIDIIDIDIIDMOUNT");
     this.fetchOptions();
   }
 
@@ -48,12 +49,6 @@ class PersonFilterDrawer extends Component {
     this.setState({ loading: true });
     Promise.all([
       this.fetchPositions()
-    /*  this.fetchAccountants(),
-      this.fetchBuildings(),
-      this.fetchMakers(),
-      this.fetchOfficers(),
-      this.fetchRooms(),
-      this.fetchStates()*/
     ]).then(() => {
       this.setState({ loading: false });
     });
@@ -61,61 +56,19 @@ class PersonFilterDrawer extends Component {
 
   fetchPositions = () =>
     new Promise(resolve => {
-      request.get("position/all").then(positions => {
-        positions.unshift(null);
-        this.setState({ positions });
+      request.get("position/all").then(positionDtos => {
+        positionDtos.unshift(null);
+        console.log(22222222222222, positionDtos);
+        this.setState({ positionDtos });
         resolve();
       });
     });
-
-  /*fetchBuildings = () =>
-    new Promise(resolve => {
-      request.get("building/all").then(buildings => {
-        buildings.unshift(null);
-        this.setState({ buildings });
-        resolve();
-      });
-    });
-
-  fetchMakers = () =>
-    new Promise(resolve => {
-      request.get("object/maker/all").then(makers => {
-        makers.unshift(null);
-        this.setState({ makers });
-        resolve();
-      });
-    });
-
-  fetchOfficers = () =>
-    new Promise(resolve => {
-      request.get("officer/all").then(officers => {
-        officers.unshift(null);
-        this.setState({ officers });
-        resolve();
-      });
-    });
-
-  fetchRooms = () =>
-    new Promise(resolve => {
-      request.get("room/number/all").then(rooms => {
-        rooms.unshift(null);
-        this.setState({ rooms });
-        resolve();
-      });
-    });
-
-  fetchStates = () =>
-    new Promise(resolve => {
-      request.get("object/state/all").then(states => {
-        states.unshift(null);
-        this.setState({ states });
-        resolve();
-      });
-    });*/
 
   render() {
     const { classes, theme, open, onClose, onSubmit, filter } = this.props;
     const { loading, ...options } = this.state;
+    console.log(1111111111111111111, options);
+
     return (
       <Drawer
         className={classes.drawer}

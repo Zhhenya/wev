@@ -9,6 +9,7 @@ import stuff.dto.PersonFilterDto;
 import stuff.entity.Person;
 import stuff.repository.PersonRepository;
 import stuff.repository.PositionRepository;
+import stuff.repository.person.PersonCriteriaRepository;
 
 import java.util.List;
 

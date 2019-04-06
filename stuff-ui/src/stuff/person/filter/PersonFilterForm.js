@@ -19,10 +19,7 @@ const PersonFilterForm = props => {
     onSubmit,
     classes,
     initial,
-    surnames,
-    firstNames,
-    positions,
-    academicTitles
+    positionDtos,
   } = props;
   return (
     <Formik
@@ -31,88 +28,18 @@ const PersonFilterForm = props => {
       render={() => (
         <Form>
           <FormGroup>
-            <InputField name="caption" label="Имя содержит"/>
-            <InputField name="caption" label="Фамилия содержит"/>
-            <InputField name="caption" label="Титул"/>
-            {/* <Typography variant="caption"></Typography>*/}
-            {/*   <Grid container justify="space-between">
-              <Grid item>
-                <InputField name="numberGreater" label="Больше" />
-              </Grid>
-              <Grid item>
-                <InputField name="numberLess" label="Меньше" />
-              </Grid>
-            </Grid>*/}
-            {/*   <AutocompleteSelectField
-              name="academicTitles"
-              displayLabel="Титул"
-              options={academicTitles}
-              placeholder=""
-            />*/}
-            {/*  <Typography style={{ marginTop: 10 }} variant="caption">
-              Дата приобретения
-            </Typography>*/}
-            {/*   <Grid container justify="space-between">
-              <Grid item>
-                <InputField
-                  name="dateLater"
-                  label="Позже"
-                  type="date"
-                  InputLabelProps={{ shrink: true }}
-                />
-              </Grid>
-              <Grid item>
-                <InputField
-                  name="dateEarlier"
-                  label="Раньше"
-                  type="date"
-                  InputLabelProps={{ shrink: true }}
-                />
-              </Grid>
-            </Grid>*/}
-            {/* <Typography variant="caption">Стоимость</Typography>
-            <Grid container justify="space-between">
-              <Grid item>
-                <InputField name="costGreater" label="Дороже" />
-              </Grid>
-              <Grid item>
-                <InputField name="costLess" label="Дешевле" />
-              </Grid>
-            </Grid>*/}
-          {/*  <AutocompleteSelectField
-              name="position"
+            <InputField name="firstName" label="Имя содержит"/>
+            <InputField name="surname" label="Фамилия содержит"/>
+            <InputField name="academicTitle" label="Титул содержит"/>
+            <InputField name="biography" label="Биография содержит"/>
+            <InputField name="interests" label="Интересы содержат"/>
+               <AutocompleteSelectField
+              name="positionDto"
               label="name"
               displayLabel="Должность"
-              options={positions}
-              placeholder=""
-            />*/}
-            {/* <AutocompleteSelectField
-              name="building"
-              label="address"
-              options={buildings}
-              displayLabel="Адрес здания"
+              options={positionDtos}
               placeholder=""
             />
-            <AutocompleteSelectField
-              name="state"
-              displayLabel="Состояние"
-              options={states}
-              placeholder=""
-            />*/}
-            {/*    <AutocompleteSelectField
-              name="officer"
-              label="name"
-              displayLabel="Работник хоз.части"
-              options={officers}
-              placeholder=""
-            />
-            <AutocompleteSelectField
-              name="accountant"
-              label="name"
-              displayLabel="Принимающий бухгалтер"
-              options={accountants}
-              placeholder=""
-            />*/}
             <Divider/>
             <Button
               type="submit"
@@ -131,10 +58,7 @@ const PersonFilterForm = props => {
 
 PersonFilterForm.propTypes = {
   onSubmit: PropTypes.func,
-  /*  surnames,
-    firstNames,*/
-  positionD: PropTypes.array
-  // academicTitles
+  positions: PropTypes.array
 };
 
 export default withStyles(styles)(PersonFilterForm);

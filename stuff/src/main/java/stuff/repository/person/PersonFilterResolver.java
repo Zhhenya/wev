@@ -1,4 +1,4 @@
-package stuff.service.person;
+package stuff.repository.person;
 
 import stuff.dto.PersonFilterDto;
 import stuff.entity.Person;

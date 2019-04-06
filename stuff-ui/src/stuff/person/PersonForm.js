@@ -15,10 +15,11 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
-import PersonFilterForm from "./filter/PersonFilterForm";
 import FilterList from "@material-ui/icons/FilterList";
 import SimpleAlertDialog from "../../components/SimpleAlertDialog";
 import Grid from "@material-ui/core/Grid";
+import PersonFilterDrawer from "./filter/PersonFilterDrawer";
+import { isEqual } from "lodash";
 
 const styles = () => ({
   root: {
@@ -62,7 +63,6 @@ class PersonForm extends Component {
     error: null,
     persons: [],
     positions: [],
-    //   objects:[],
     filter: INITIAL_FILTER
   };
 
@@ -71,6 +71,13 @@ class PersonForm extends Component {
     //   this.fetchPerson();
     this.fetchPosition();
     this.fetchFilteredData();
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (!isEqual(prevState.filter, this.state.filter)) {
+      console.log("FILTERUPDATEEEE", this.state.filter);
+      this.fetchFilteredData();
+    }
   }
 
   fetchPerson = () => {
@@ -89,12 +96,11 @@ class PersonForm extends Component {
 
 
   fetchFilteredData = () => {
-    console.log("filer");
+    console.log("filter");
     request
       .post("person/filtered", this.state.filter)
       .then(persons => {
         this.setState({persons});
-        console.log(1111, this.state.filter);
       })
       .catch(error => {
         this.setState({error});
@@ -129,11 +135,12 @@ class PersonForm extends Component {
   };
 
   render() {
-    const {persons, deleted, error, filter, isFilterVisible, positions} = this.state;
+    const {persons, error, filter, isFilterVisible} = this.state;
     const {classes} = this.props;
 
 
     console.log(2222, this.state.persons);
+    console.log(2222, this.state.filter);
     return (
       <>
         {error && (
@@ -146,11 +153,11 @@ class PersonForm extends Component {
             }}
           />
         )}
-        <PersonFilterForm
+        <PersonFilterDrawer
           open={isFilterVisible}
           filter={filter}
           onClose={this.changeFilterVisibility}
-          onSubmit={filter => {
+          onSubmit={filter => {console.log("FFFFFILTERRRRRR", filter);
             this.setState({filter});
           }}
         />

@@ -1,4 +1,4 @@
-package stuff.service.person;
+package stuff.repository.person;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,7 +29,7 @@ public class PersonCriteriaRepository {
         CriteriaQuery<Person> query = builder.createQuery(Person.class);
         Root<Person> entityRoot = query.from(Person.class);
         query.where(personFilterResolver.resolve(personFilterDto, builder, entityRoot)
-                .toArray(new Predicate[0]));
+                                        .toArray(new Predicate[0]));
         return entityManager.createQuery(query).getResultList();
     }
 }
